@@ -23,14 +23,3 @@ function darkMode() {
     }
 
 }
-
-function reset() {
-    //reset checkbox due to Firefox not auto resetting checkbox.
-    document.getElementById('theme').checked = false;
-}
-
-
-function setLanguage(input) {
-    window.location.href = "AQI_" + input + ".html";
-    //console.log(input);
-}
