@@ -19,7 +19,7 @@
                 </td>
                 <td class="navigation">
                     <a class="links" href="http://apims.doe.gov.my/home.html">Live data (APIMS)</a>
-                </td>
+                </td> 
                 <td class="navigation">
                     <div class="dropdown">
                         <a class="links">Live data by State (IQAir)</a>
@@ -43,7 +43,9 @@
                         </div>
                     </div>
                 </td>
-                <td><input id="theme" type="checkbox" onclick=darkMode()>Dark Mode</input>
+                <td><form autocomplete="off"> <!-- Resolves Firefox save state while refresh-->
+                    <input id="theme" type="checkbox" onclick="darkMode()">Dark Mode</input>
+                </form>
                 </td>
             </tr>
         </table>
