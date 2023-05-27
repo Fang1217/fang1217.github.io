@@ -51,29 +51,26 @@ div.content-section:not(.dark-theme) {
     margin-right: 15%;
 }
 
-table#content-table.dark-theme {
-    & td,th {
-        border: 1px solid white;
-        padding: 2px 5px;
-    }
+table#content-table.dark-theme td, th{
+    border: 1px solid white;
+    padding: 2px 5px;
+
 }
 
-table#content-table:not(dark-theme) {
-    & td,th {
-        border: 1px solid black;
-        padding: 2px 5px;
-    }
+table#content-table:not(dark-theme) td, th{
+    border: 1px solid black;
+    padding: 2px 5px;
     
 }
 /* Classes specific CSS*/
 a.links {
     color: #CDCDCD;
     text-decoration: none;
-    
-    &:hover {
-        color:cadetblue;
-        text-decoration: none;
-    }
+}
+
+a.links:hover{
+    color:cadetblue;
+    text-decoration: none;
 }
 
 td.navigation {
