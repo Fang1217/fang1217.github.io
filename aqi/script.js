@@ -2,7 +2,9 @@ function darkMode() {
     const bodyElement = document.body;
     const contentElement = document.getElementsByClassName('content-section');
     const tableElement = document.getElementById('content-table');
-        
+    
+    
+
     if (document.getElementById('theme').checked) {
         bodyElement.classList.add('dark-theme');
         for (var i = 0; i < contentElement.length; i++) {
@@ -20,6 +22,11 @@ function darkMode() {
         tableElement.classList.remove('dark-theme');
     }
 
+}
+
+function reset() {
+    //reset checkbox due to Firefox not auto resetting checkbox.
+    document.getElementById('theme').checked = false;
 }
 
 

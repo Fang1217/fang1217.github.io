@@ -51,13 +51,13 @@ div.content-section:not(.dark-theme) {
     margin-right: 15%;
 }
 
-table#content-table.dark-theme td, th{
+table#content-table.dark-theme th, table#content-table.dark-theme td{
     border: 1px solid white;
     padding: 2px 5px;
 
 }
 
-table#content-table:not(dark-theme) td, th{
+table#content-table:not(dark-theme) th, table#content-table:not(dark-theme) td{
     border: 1px solid black;
     padding: 2px 5px;
     
@@ -68,9 +68,8 @@ a.links {
     text-decoration: none;
 }
 
-a.links:hover{
+a:hover{
     color:cadetblue;
-    text-decoration: none;
 }
 
 td.navigation {
