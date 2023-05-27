@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Malaysia Air Quality Index</title>
+    <!-- CSS stylesheet -->
+    <link rel="stylesheet" href="style.css">
+    <!-- JS Scripts -->
+    <script src="script.js"></script>
+</head>
+<body> 
+    <div class="headerBar">
+        <table>
+            <tr>
+                <td colspan="10" style="font-size: 32px; font-family: Arial;">Malaysia Air Quality Index</td>
+            </tr>
+            <tr>
+                <td class="navigation">
+                    <a class="links" href="">Home</a>
+                </td>
+                <td class="navigation">
+                    <a class="links" href="http://apims.doe.gov.my/home.html">Live data (APIMS)</a>
+                </td>
+                <td class="navigation">
+                    <div class="dropdown">
+                        <a class="links">Live data by State (IQAir)</a>
+                    <div class="dropdown-content">
+                        <a href="https://www.iqair.com/malaysia/johor">Johor</a>
+                        <a href="https://www.iqair.com/malaysia/kedah">Kedah</a>
+                        <a href="https://www.iqair.com/malaysia/kelantan">Kelantan</a>
+                        <a href="https://www.iqair.com/malaysia/kuala-lumpur">Kuala Lumpur</a>
+                        <a href="https://www.iqair.com/malaysia/labuan">Labuan</a>
+                        <a href="https://www.iqair.com/malaysia/melaka">Melaka</a>
+                        <a href="https://www.iqair.com/malaysia/negeri-sembilan">Negeri Sembilan</a>
+                        <a href="https://www.iqair.com/malaysia/pahang">Pahang</a>
+                        <a href="https://www.iqair.com/malaysia/penang">Penang</a>
+                        <a href="https://www.iqair.com/malaysia/perak">Perak</a>
+                        <a href="https://www.iqair.com/malaysia/perlis">Perlis</a>
+                        <a href="https://www.iqair.com/malaysia/putrajaya">Putrajaya</a>
+                        <a href="https://www.iqair.com/malaysia/sabah">Sabah</a>
+                        <a href="https://www.iqair.com/malaysia/sarawak">Sarawak</a>
+                        <a href="https://www.iqair.com/malaysia/selangor">Selangor</a>
+                        <a href="https://www.iqair.com/malaysia/terengganu">Terengganu</a>
+                        </div>
+                    </div>
+                </td>
+                <td><input id="theme" type="checkbox" onclick=darkMode()>Dark Mode</input>
+                </td>
+            </tr>
+        </table>
+        </div>
+        <div class="page-content" id="top">
+            <div class="content-section">
+                <h2>What is Air Quality Index?</h2>
+                <p>
+                    An air quality index (AQI) is used by government agencies to communicate to the public how polluted the air currently is or how polluted it is forecast to become. AQI information is obtained by averaging readings from an air quality sensor, which can increase due to vehicle traffic, forest fires, or anything that can increase air pollution. Pollutants tested include particulates, ozone, nitrogen dioxide, carbon monoxide, sulphur dioxide, among others.
+                </p>
+                <p>
+                    Public health risks increase as the AQI rises, especially affecting children, the elderly, and individuals with respiratory or cardiovascular issues. During these times, governmental bodies generally encourage people to reduce physical activity outdoors, or even avoid going out altogether. The use of face masks such as cloth masks may also be recommended.
+                </p>
+                <p>
+                    Source: <a href="https://www.wikiwand.com/en/Air_quality_index">Wikipedia</a>
+                </p>
+            </div>
+             
+            <div class="content-section">
+                
+                <h2>Air Quality Index in Malaysia</h2>
+                <p>The Malaysian Air Pollution Index (API) calculation is based on Pollution Standard Index (PSI) that has been accepted at the
+                    international level by United States Environmental Protection Agency (USEPA)</p>
+                <p>The measurement of 6 Pollutant Parameters are:
+                    <ul>
+                        <li>Sulphur Dioxide</li>
+                        <li>Particular Matter (PM<sub>10</sub>)</li>
+                        <li>Particular Matter (PM<sub>2.5</sub>)</li>
+                        <li>Ozone</li>
+                        <li>Nitrogen Dioxide</li>
+                        <li>Carbon Monoxide</li>
+                    </ul>
+                </p>
+                <p>API readings are determined by the concentration of particulate matter that is the dominant pollutant most of the time especially during haze in Malaysia, as allustrated in the following diagram:</p>
+                <img src="API_calc.PNG" width="60%" style="display: block; margin: auto;"/>
+                <p>Source: 
+                    <a href="http://apims.doe.gov.my/aboutapi.html">APIMS (Air Pollutant Index of Malaysia)</a>
+                </p>
+            </div>
+
+            <div class="content-section">
+                <h2>Air Pollutant Index: Impact on Health</h2>
+                <table id="content-table">
+                    <tr>
+                        <th>Air Pollutant Index (API)</th>
+                        <th>Status</th>
+                        <th>Health Effect</th>
+                        <th>Health Advice</th>
+                    </tr>
+                    <tr>
+                        <th>0 - 50</th>
+                        <td style="background-color: blue; color: white;">Good</td>
+                        <td>Low pollution without any bad effect on health.</td>
+                        <td rowspan="2">No restriction for outdoor activities to the public. Maintain healthy lifestyle.</td>
+                    </tr>
+                    <tr>
+                        <th>51 - 100</th>
+                        <td style="background-color: green; color: white;">Moderate</td>
+                        <td>Moderate pollution that does not pose any bad effect on health</td>
+                    </tr>
+                    <tr>
+                        <th>101 - 200</th>
+                        <td style="background-color: yellow; color: black;">Unhealthy (for sensitive group)</td>
+                        <td>Worsen the health condition for elderly, pregnant woman, children and people who is with heart and lung complications.</td>
+                        <td>Limited outdoor activities for the high risk people.</td>
+                    </tr>
+                    <tr>
+                        <th>201 - 300</th>
+                        <td style="background-color: orange; color: black;">Very Unhealthy</td>
+                        <td>Worsen the health condition and low tolerance of physical exercises to people with heart and lung complications.
+                            Affect public health.</td>
+                        <td>Old and high risk people are advised to stay indoor and reduce physical activities.
+                            People with health complications are advised to see doctor.</td>
+                    </tr>
+                    <tr>
+                        <th>301 - 500</th>
+                        <td style="background-color: red; color: white;">Hazardous</td>
+                        <td>Hazardous to high risk people and public health.</td>
+                        <td>Old and high risk people are prohibited for outdoor activities. Public are advised to prevent from outdoor activities.</td>
+                    </tr>
+                    <tr>
+                        <th>&gt; 500</th>
+                        <td style="background-color: darkred; color: white;">Emergency</td>
+                        <td>Hazardous to high risk people and public health.</td>
+                        <td>Public are advised to follow orders from National Security Council and always follow the announcement in mass media.</td>
+                    </tr>
+                </table>
+                <p>Source: 
+                    <a href="http://apims.doe.gov.my/aboutapi.html">APIMS (Air Pollutant Index of Malaysia)</a>
+                </p>
+            </div>
+
+                
+                
+                <p>
+                    Translate this page to different language: 
+                    <select id="language-select" onchange="setLanguage(value)">
+                        <option value="en" selected>English</option>
+                        <option value="ms">Malay</option>
+                    </select>
+                    
+                    <a href="#">Return to top</a>
+                </p>
+                
+        </div>
+    </div>
+</body>
+</html>
