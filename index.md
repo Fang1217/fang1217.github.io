@@ -12,7 +12,8 @@
 
 
     <p>At the meantime, the existing links are as follows:</p>
-    <p><a href="MS Word Guide.html">MS Word Ultimate Guide</a></p>
+    <p><a href="/msword">MS Word Ultimate Guide</a></p>
+    <p><a href="/msexcel">MS Word Ultimate Guide</a></p>
     
 </body>
 
