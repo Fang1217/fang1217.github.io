@@ -104,5 +104,25 @@ To adjust cell formatting:
 ![Alt text](image-5.png)
 
 If the formatting you wish is not included, you can create a custom format based on your preference.
+The following table displays the full list of custom formattings:
 
-The full guide is available in [this website](https://www.ablebits.com/office-addins-blog/custom-excel-number-format/):
+| Format Code | Description |
+| --- | --- |
+| General | General number format
+| #	| Digit placeholder that represents optional digits and does not display extra zeros.
+| 0	| Digit placeholder that displays insignificant zeros.
+| ?	| Digit placeholder that leaves a space for insignificant zeros but doesn't display them.
+| @	| Text placeholder
+| . | Decimal point
+| , | Thousands separator. A comma that follows a digit placeholder scales the number by a thousand.
+| \	| Displays the character that follows it.
+| " " | Display any text enclosed in double quotes.
+| %	| Multiplies the numbers entered in a cell by 100 and displays the percentage sign.
+| /	| Represents decimal numbers as fractions.
+| E	| Scientific notation format
+| _ | Skips the width of the next character. It's commonly used in combination with parentheses to add left and right indents, _( and _) respectively.
+| * | Repeats the character that follows it until the width of the cell is filled. It's often used in combination with the space character to change alignment.
+| [] | Create conditional formats.
+
+
+The full guide is available in [this website](https://www.ablebits.com/office-addins-blog/custom-excel-number-format/).
