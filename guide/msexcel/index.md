@@ -26,7 +26,7 @@ To perform basic math operation (add+, subtract-, multiply*, divide/, exponent^)
 For example, to calculate the sum of A1 + B1 in C1, We type =A1+B1.
 Example as follows:
 
-![](img/01.png)
+![](01.png)
 
 This operations are not limited to number operations, dates are also applicable. 
 
@@ -35,11 +35,11 @@ This operations are not limited to number operations, dates are also applicable.
 
 Now if you drag down from the bottom right, **notice that the cell reference number will increase**. 
 
-![](img/02.png)
+![](02.png)
 
 This is where the dollar sign comes in. The dollar sign is added **before the col/row number**, to **fix** the number to remain constant.
 
-![](img/03.png)
+![](03.png)
 
 ---
 ## Functions
