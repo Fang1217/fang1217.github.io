@@ -1,22 +1,13 @@
 
-<html>
-<head>
-    <title>
-        Fang's GitHub Page
-    </title>
-    
-</head>
-<body>
-    Hello World!
-    <p>This site is obviously work in progress, and this site will include all the future guides.</p>
+Hello World!
 
+This site is obviously not priortizing aesthetics, will just include all the future guides available.
 
-    <p>At the meantime, the existing links are as follows:</p>
-    <p><a href="guide/msword">MS Word Ultimate Guide</a></p>
-    <p><a href="guide/msexcel">MS Excel Ultimate Guide</a></p>
-    
-</body>
+The links are as follows: 
 
+- [MS Word Ultimate Guide](guide/msword)
+- [MS Excel Ultimate Guide](guide/msexcel)
+- [OneDrive Ultimate Guide](guide/onedrive)
+- 
 
-</html>
 
