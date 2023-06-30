@@ -35,6 +35,8 @@ This operations are not limited to number operations, dates are also applicable.
 
 Now if you drag down from the bottom right, **notice that the cell reference number will increase**. 
 
+![Alt text](image-9.png)
+
 ![Alt text](image-7.PNG)
 
 This is where the dollar sign comes in. The dollar sign is added **before the col/row number**, to **fix** the number to remain constant.
