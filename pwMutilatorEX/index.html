@@ -102,6 +102,11 @@
                     Input this activation code after converting all letters to lower, to proceed to the next phase.
                 </p>
                 <p>
+                    If the character can not be inputed directly, it can be solved by inputting 2
+                    identical corresponding symbols. Refer to Appendix II for reference on input for corresponding
+                    characters.
+                </p>
+                <p>
                     If any non-ignored module were solved during this phase, alarm will be
                     triggered and strike will be given.
                 </p>
@@ -181,7 +186,25 @@
                     C<sub>n</sub> = Average I<sub>n</sub> + (2FAST&trade;) mod 9 + CT
                 </p>
                 <p>The Combined Time, CT, can be found by following: </p>
+                <p class="formula">
+                    Combined time = (BT + ET) % 60
+                </p>
+                <table class="none">
+                    <tr>
+                        <td>
+                            Where:
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>
+                            t
+                        </th>
+                        <td>
+                            = Elapsed time
+                        </td>
+                    </tr>
 
+                
                 <p>
                     Finally, the final value is constructed as shown as following:
                 </p>
