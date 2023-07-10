@@ -124,7 +124,7 @@
                     formula below:
                 </p>
                 <p class="formula" style="margin: 0 0 0 0;">
-                    R<sub>n</sub> = [S<sub>n</sub> + (I<sub>n</sub> ✕ t<sub>n+1</sub>)] mod 10<sup>4</sup>
+                    R<sub>n</sub> = [S<sub>n</sub> + (I<sub>n</sub> ✕ t<sub>n</sub>)] mod 10<sup>4</sup>
 
 
                 <table class="none">
@@ -197,20 +197,47 @@
                     </tr>
                     <tr>
                         <th>
-                            t
+                            BT
                         </th>
                         <td>
-                            = Elapsed time
+                            = Bomb time remaining (seconds)
                         </td>
                     </tr>
-
+                    <tr>
+                        <th>
+                            ET
+                        </th>
+                        <td>
+                            = Elapsed time 
+                        </td>
+                    </tr>
+                </table>
                 
                 <p>
                     Finally, the final value is constructed as shown as following:
                 </p>
                 <p class="formula">
-                    Fv = [ Cv + t ] mod 94 + 33
+                    Fv = [ Cv + t<sub>n+1</sub> ] mod 94 + 33
                 </p>
+                <table class="none">
+                    <tr>
+                        <td>
+                            Where:
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>
+                            t<sub>n</sub>
+                        </th>
+                        <td>
+                            = Elapsed time when the stage n is generated
+                        </td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>  (or elapsed time when pre-input phase starts if it is the last stage)</td>
+                    </tr>
+                </table>
                 <p>
                     Note: If current stage's Fv is equal to the previous stage's, add 1 to Fv. Subtract 1 instead if it
                     goes
