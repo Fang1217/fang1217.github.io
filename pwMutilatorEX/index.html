@@ -186,7 +186,7 @@
                 </p>
                 <p>The Combined Time, CT, can be found by following: </p>
                 <p class="formula">
-                    Combined time = (BT + ET) % 60
+                    Combined time = (BT<sub>n+1</sub> + ET<sub>n+1</sub>) % 60
                 </p>
                 <table class="none">
                     <tr>
@@ -196,7 +196,7 @@
                     </tr>
                     <tr>
                         <th>
-                            BT<sub>n+1</sub>
+                            BT<sub>n</sub>
                         </th>
                         <td>
                             = Bomb time remaining (seconds) when the stage n is generated
@@ -211,7 +211,7 @@
                     </tr>
                     <tr>
                         <th>
-                            ET<sub>n+1</sub>
+                            ET<sub>n</sub>
                         </th>
                         <td>
                             = Elapsed time (seconds) when the stage n is generated
@@ -230,7 +230,7 @@
                     Finally, the final value is constructed as shown as following:
                 </p>
                 <p class="formula">
-                    Fn = [ Cn + t ] mod 94 + 33
+                    Fn = [ C<sub>n</sub> + t ] mod 94 + 33
                 </p>
                 <table class="none">
                     <tr>
