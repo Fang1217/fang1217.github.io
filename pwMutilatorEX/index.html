@@ -40,7 +40,7 @@
         table.symbols {
             float: left; 
             margin-right: 24px; 
-            font-size: 12px;
+            font-size: 12.5px;
             text-align: center;
         }
     </style>
@@ -60,7 +60,7 @@
 
                 <p><strong>Note: This module is in beta phase, and this module will be consistently be improved from
                         time to time.</strong>
-                    Last updated: 10/07/2023 23:58 GMT+8</p>
+                    <br>Last updated: 11/07/2023 02:00 GMT+8</p>
                 <p>
                     In order to solve the module, a password is required to be entered in the input phase, that is after
                     all the
@@ -101,9 +101,7 @@
                     Input this activation code after converting all letters to lower, to proceed to the next phase.
                 </p>
                 <p>
-                    If the character can not be inputed directly, it can be solved by inputting 2
-                    identical corresponding symbols. Refer to Appendix II for reference on input for corresponding
-                    characters.
+                     Refer to <strong>Appendix II</strong> for reference during input.
                 </p>
                 <p>
                     If any non-ignored module were solved during this phase, alarm will be
@@ -120,24 +118,15 @@
                 </p>
                 <p>
                     The raw value for the given stage n, <strong>R<sub>n</sub></strong>, is calculated with the
-                    formula below:
+                    formula below: 
                 </p>
                 <p class="formula" style="margin: 0 0 0 0;">
-                    R<sub>n</sub> = [S<sub>n</sub> + (I<sub>n</sub> ✕ t<sub>n</sub>)] mod 10<sup>4</sup>
-
+                    R<sub>n</sub> = [R<sub>n</sub> + (I<sub>n</sub>)] mod 10<sup>4</sup>
 
                 <table class="none">
                     <tr>
                         <td>
                             Where:
-                        </td>
-                    </tr>
-                    <tr>
-                        <th>
-                            S<sub>n</sub>
-                        </th>
-                        <td>
-                            = The starting value when the numbers are generated
                         </td>
                     </tr>
                     <tr>
@@ -149,18 +138,13 @@
                             <strong>I<sub>f</sub></strong> &lt; 10<sup>3</sup> - 2)
                         </td>
                     </tr>
-                    <tr>
-                        <th>
-                            t<sub>n</sub>
-                        </th>
-                        <td>
-                            = Elapsed time (in seconds) when the stage is generated.
-                        </td>
-                    </tr>
                 </table>
                 </p>
                 <p>
-                    However, given the system is corrupted, Rv might not be calculated as intended.
+                    This increment will happen every second and changes every 300 seconds.
+                </p>
+                <p>
+                    However, given the system is corrupted, the R<sub>n</sub> might not be calculated as intended.
                     That includes:-
                 </p>
                 <ol>
@@ -182,11 +166,11 @@
                     The calculated value, which changes every second, can be obtained with the formula as follows:-
                 </p>
                 <p class="formula">
-                    C<sub>n</sub> = Average I<sub>n</sub> + (2FAST&trade;) mod 9 + CT
+                    C<sub>n</sub> = Average I<sub>n</sub> + (2FAST&trade;) mod 9 + CT<sub>n+1</sub>
                 </p>
-                <p>The Combined Time, CT, can be found by following: </p>
+                <p>The Combined Time when the stage n is generated, can be found by following: </p>
                 <p class="formula">
-                    Combined time = (BT<sub>n+1</sub> + ET<sub>n+1</sub>) % 60
+                    Combined Time, CT<sub>n</sub> = (BT<sub>n</sub> + ET<sub>n</sub>) % 60
                 </p>
                 <table class="none">
                     <tr>
@@ -199,14 +183,14 @@
                             BT<sub>n</sub>
                         </th>
                         <td>
-                            = Bomb time remaining (seconds) when the stage n is generated
+                            = Bomb time remaining (seconds) when the stage n is started
                         </td>
                     </tr>
                     <tr>
                         <th>
                         </th>
                         <td>
-                               (or when pre-input phase starts if it is the last stage)
+                            &nbsp;&nbsp;&nbsp;(or when pre-input phase starts if it is the last stage)
                         </td>
                     </tr>
                     <tr>
@@ -214,14 +198,14 @@
                             ET<sub>n</sub>
                         </th>
                         <td>
-                            = Elapsed time (seconds) when the stage n is generated
+                            = Total elapsed time (seconds) when the stage n is started
                         </td>
                     </tr>
                     <tr>
                         <th>
                         </th>
                         <td>
-                            (or when pre-input phase starts if it is the last stage)
+                            &nbsp;&nbsp;&nbsp;(or when pre-input phase starts if it is the last stage)
                         </td>
                     </tr>
                 </table>
@@ -230,7 +214,7 @@
                     Finally, the final value is constructed as shown as following:
                 </p>
                 <p class="formula">
-                    Fn = [ C<sub>n</sub> + t ] mod 94 + 33
+                    F<sub>n</sub> = [ C<sub>n</sub> + t ] mod 94 + 33
                 </p>
                 <table class="none">
                     <tr>
@@ -242,7 +226,7 @@
                         <th>
                             t
                         </th>
-                        <td>= Elapsed time (seconds)</td>
+                        <td>= Total elapsed time (seconds)</td>
 
                     </tr>
                     <tr>
@@ -250,7 +234,7 @@
                     </tr>
                 </table>
                 <p>
-                    Note: If current stage's Fv is equal to the previous stage's, add 1 to Fv. Subtract 1 instead if it
+                    Note: If current stage's final value is equal to the previous stage's, add 1 to Fv. Subtract 1 instead if it
                     goes
                     over 126.
                 </p>
@@ -272,14 +256,13 @@
                 </p>
                 <ul>
                     <li>
-                        Prepend and append <code>&#</code> and <code>;</code> respectively to all F<sub>n</sub> and
-                        convert the result into characters based on
-                        their numeric code from HTML Character Codes.
+                        Prepend and append <code>&#</code> and <code>;</code> respectively to all F<sub>n</sub>.
                     </li>
                     <li>
-                        If the character can not be inputed directly, it can be solved by inputting 2
-                        identical corresponding symbols. Refer to Appendix II for reference on input for corresponding
-                        characters.
+                        Convert the result into characters based on their numeric code from HTML Character Codes.
+                    </li>
+                    <li>
+                         Refer to Appendix II for reference during input.
                     </li>
                 </ul>
                 </p>
@@ -407,8 +390,15 @@
                 <span class="page-header-section-title">Password Mutilator EX</span>
             </div>
             <div class="page-content">
-                <h3>Appendix II: Reference on input for corresponding characters</h3>
+                <h3>Appendix II: Reference during Input</h3>
                 <table class="symbols">
+                    <p>If the character can not be inputed directly, it can be solved by inputting 2
+                        identical corresponding symbols.
+                        <br>For example: inputting "11" will automatically converted into '!'.
+                    </p>
+                    <p>
+                        As it is a password after all, the inputted will be hidden from the display and be replaced by * instead.
+                    </p>
                     <tr><th>Input</th><th>Corresponding Character</th></tr>
                     <tr><td>Lowercase Letters <br> (a, b, c, ...) </td><td>Equivalent Uppercase Letters <br> (A, B, C, ...)</td></tr>
                     <tr><td>~</td><td>`</td></tr>
