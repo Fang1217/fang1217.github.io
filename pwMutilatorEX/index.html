@@ -59,7 +59,8 @@
                 <p class="flavour-text">This thing is not as secure as 256-bit security, I think.</p>
 
                 <p><strong>Note: This module is in beta phase, and this module will be consistently be improved from
-                        time to time.</strong></p>
+                        time to time.</strong>
+                    Last updated: 10/07/2023 23:49 GMT+8</p>
 
                 <p>
                     In order to solve the module, a password is required to be entered in the input phase, that is after
@@ -73,10 +74,11 @@
                 </p>
 
                 <h3>Preface</h3>
-                <p>This module consist of: 
+                <p>This module consists of: 
                 <ul>
                     <li>A display</li>
-                    <li>Function key (Fn)</li>
+                    <li>Function key (Fn) that serves as Enter to submit the input</li>
+                    <li>Backspace</li>
                     <li>Four directional keys for navigating the input</li>
                     <li>Two timer displays</li>
                 </ul>
@@ -100,6 +102,11 @@
                     Input this activation code after converting all letters to lower, to proceed to the next phase.
                 </p>
                 <p>
+                    If the character can not be inputed directly, it can be solved by inputting 2
+                    identical corresponding symbols. Refer to Appendix II for reference on input for corresponding
+                    characters.
+                </p>
+                <p>
                     If any non-ignored module were solved during this phase, alarm will be
                     triggered and strike will be given.
                 </p>
@@ -117,7 +124,7 @@
                     formula below:
                 </p>
                 <p class="formula" style="margin: 0 0 0 0;">
-                    R<sub>n</sub> = [S<sub>n</sub> + (I<sub>n</sub> ✕ t<sub>n+1</sub>)] mod 10<sup>4</sup>
+                    R<sub>n</sub> = [S<sub>n</sub> + (I<sub>n</sub> ✕ t<sub>n</sub>)] mod 10<sup>4</sup>
 
 
                 <table class="none">
@@ -161,7 +168,7 @@
                     <li>
                         t &ne; 0 when the stage is generated,
                     </li>
-                    <li>
+                    <li style="text-decoration: line-through;">
                         R<sub>n</sub> is refreshed once per 0.5 second,
                     </li>
                     <li>
@@ -179,13 +186,58 @@
                     C<sub>n</sub> = Average I<sub>n</sub> + (2FAST&trade;) mod 9 + CT
                 </p>
                 <p>The Combined Time, CT, can be found by following: </p>
-
+                <p class="formula">
+                    Combined time = (BT + ET) % 60
+                </p>
+                <table class="none">
+                    <tr>
+                        <td>
+                            Where:
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>
+                            BT
+                        </th>
+                        <td>
+                            = Bomb time remaining (seconds)
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>
+                            ET
+                        </th>
+                        <td>
+                            = Elapsed time 
+                        </td>
+                    </tr>
+                </table>
+                
                 <p>
                     Finally, the final value is constructed as shown as following:
                 </p>
                 <p class="formula">
-                    Fv = [ Cv + t ] mod 94 + 33
+                    Fv = [ Cv + t<sub>n+1</sub> ] mod 94 + 33
                 </p>
+                <table class="none">
+                    <tr>
+                        <td>
+                            Where:
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>
+                            t<sub>n</sub>
+                        </th>
+                        <td>
+                            = Elapsed time when the stage n is generated
+                        </td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>  (or elapsed time when pre-input phase starts if it is the last stage)</td>
+                    </tr>
+                </table>
                 <p>
                     Note: If current stage's Fv is equal to the previous stage's, add 1 to Fv. Subtract 1 instead if it
                     goes
