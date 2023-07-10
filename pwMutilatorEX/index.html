@@ -60,7 +60,7 @@
 
                 <p><strong>Note: This module is in beta phase, and this module will be consistently be improved from
                         time to time.</strong>
-                    Last updated: 10/07/2023 23:49 GMT+8</p>
+                    Last updated: 10/07/2023 23:58 GMT+8</p>
 
                 <p>
                     In order to solve the module, a password is required to be entered in the input phase, that is after
@@ -197,18 +197,32 @@
                     </tr>
                     <tr>
                         <th>
-                            BT
+                            BT<sub>n+1</sub>
                         </th>
                         <td>
-                            = Bomb time remaining (seconds)
+                            = Bomb time remaining (seconds) when the stage n is generated
                         </td>
                     </tr>
                     <tr>
                         <th>
-                            ET
                         </th>
                         <td>
-                            = Elapsed time 
+                               (or when pre-input phase starts if it is the last stage)
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>
+                            ET<sub>n+1</sub>
+                        </th>
+                        <td>
+                            = Elapsed time (seconds) when the stage n is generated
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>
+                        </th>
+                        <td>
+                            (or when pre-input phase starts if it is the last stage)
                         </td>
                     </tr>
                 </table>
@@ -217,7 +231,7 @@
                     Finally, the final value is constructed as shown as following:
                 </p>
                 <p class="formula">
-                    Fv = [ Cv + t<sub>n+1</sub> ] mod 94 + 33
+                    Fv = [ Cv + t ] mod 94 + 33
                 </p>
                 <table class="none">
                     <tr>
@@ -227,15 +241,13 @@
                     </tr>
                     <tr>
                         <th>
-                            t<sub>n</sub>
+                            t
                         </th>
-                        <td>
-                            = Elapsed time when the stage n is generated
-                        </td>
+                        <td>= Elapsed time (seconds)</td>
+
                     </tr>
                     <tr>
-                        <td></td>
-                        <td>  (or elapsed time when pre-input phase starts if it is the last stage)</td>
+                        <td> </td>
                     </tr>
                 </table>
                 <p>
