@@ -5,9 +5,6 @@ This site is obviously not priortizing aesthetics, will just include all the fut
 
 The links are as follows: 
 
-- [MS Word Ultimate Guide](guide/msword)
 - [MS Excel Ultimate Guide](guide/msexcel)
 - [OneDrive Ultimate Guide](guide/onedrive)
-- 
-
 
